@@ -1,5 +1,4 @@
-
-import { Target, Filter, Clock, TrendingUp } from 'lucide-react';
+import { Target, Filter, Clock, TrendingUp, Phone } from 'lucide-react';
 
 export const ValuePropSection = () => {
   return (
