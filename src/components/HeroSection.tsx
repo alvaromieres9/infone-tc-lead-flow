@@ -25,7 +25,7 @@ export const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            ¿Te Agobia <span className="text-infone-600">Idealista?</span><br />
+            ¿Te Agobia <span className="text-[#c4d82b]">Idealista?</span><br />
             <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">IA Que Filtra</span>
           </h1>
 
