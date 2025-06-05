@@ -21,8 +21,8 @@ export const FinalCTASection = () => {
 
     setTimeout(() => {
       toast({
-        title: "¡Solicitud de Plaza Enviada!",
-        description: "Te contactaremos en las próximas 24 horas para confirmar tu entrada al consejo fundador.",
+        title: "¡Solicitud Enviada!",
+        description: "Te contactaremos en las próximas 24 horas para confirmar tu acceso al piloto.",
       });
       setIsSubmitting(false);
       setFormData({ name: '', agency: '', email: '' });
@@ -42,15 +42,15 @@ export const FinalCTASection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">
-              Tu Decisión: <br />
-              <span className="text-red-400">Seguir en el Caos</span> o <span className="text-green-400">Liderar el Cambio.</span>
+              ¿Listo para Proteger <br />
+              <span className="text-blue-400">Tus Oportunidades?</span>
             </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-8 border border-gray-600">
               <h3 className="text-2xl font-bold mb-6 text-center">
-                Solicitar Plaza como Socio Fundador
+                Solicitar Acceso al Piloto
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -108,7 +108,7 @@ export const FinalCTASection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-6 text-lg font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 text-lg font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export const FinalCTASection = () => {
                       Enviando Solicitud...
                     </div>
                   ) : (
-                    'SOLICITAR MI PLAZA COMO SOCIO FUNDADOR'
+                    'ACCEDER AL PILOTO'
                   )}
                 </Button>
 
@@ -128,30 +128,30 @@ export const FinalCTASection = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-red-900/50 to-orange-900/50 border border-red-700 rounded-xl p-6">
-                <h4 className="font-bold text-red-300 mb-3 text-lg">⚡ Qué Ocurre Tras Tu Solicitud:</h4>
+              <div className="bg-gradient-to-r from-blue-900/50 to-blue-800/50 border border-blue-700 rounded-xl p-6">
+                <h4 className="font-bold text-blue-300 mb-3 text-lg">⚡ Qué Ocurre Tras Tu Solicitud:</h4>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span><strong>24h:</strong> Confirmación de plaza y llamada de bienvenida</span>
+                    <span><strong>24h:</strong> Confirmación y llamada de bienvenida</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span><strong>48h:</strong> Sesión de configuración personalizada</span>
+                    <span><strong>48h:</strong> Configuración personalizada</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span><strong>72h:</strong> Sistema activo protegiendo tus oportunidades</span>
+                    <span><strong>72h:</strong> Sistema activo y funcionando</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-r from-yellow-900/50 to-orange-900/50 border border-yellow-700 rounded-xl p-6 text-center">
                 <p className="text-yellow-300 font-bold text-lg mb-2">
-                  🚨 La próxima oportunidad será en 6+ meses
+                  🚨 Solo 2 plazas disponibles
                 </p>
                 <p className="text-gray-300 text-sm">
-                  ¿Te arriesgas a seguir perdiendo oportunidades de oro mientras tu competencia se adelanta?
+                  La próxima oportunidad será en varios meses.
                 </p>
               </div>
             </div>
