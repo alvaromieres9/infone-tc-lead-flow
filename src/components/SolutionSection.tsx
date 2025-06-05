@@ -7,9 +7,9 @@ export const SolutionSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Presentamos tu <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Portero Inteligente</span>, 24/7.
+            Presentamos tu <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Asistente Inteligente</span>, 24/7.
           </h2>
-          <p className="text-lg text-gray-600">Así es como Infone protege y optimiza tu flujo de llamadas:</p>
+          <p className="text-lg text-gray-600">Así es como InfOne protege y optimiza tu flujo de llamadas:</p>
         </div>
 
         {/* Paso 1: Filtro de Intención */}
