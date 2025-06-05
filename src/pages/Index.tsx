@@ -3,7 +3,7 @@ import { HeroSection } from '@/components/HeroSection';
 import { TruthSection } from '@/components/TruthSection';
 import { SolutionSection } from '@/components/SolutionSection';
 import { ExclusiveInviteSection } from '@/components/ExclusiveInviteSection';
-import { UrgencySection } from '@/components/UrgencySection';
+import { FAQSection } from '@/components/FAQSection';
 import { FinalCTASection } from '@/components/FinalCTASection';
 
 const Index = () => {
@@ -13,7 +13,7 @@ const Index = () => {
       <TruthSection />
       <SolutionSection />
       <ExclusiveInviteSection />
-      <UrgencySection />
+      <FAQSection />
       <FinalCTASection />
     </div>
   );

@@ -67,13 +67,16 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				infone: {
-					50: '#f0f9ff',
-					100: '#e0f2fe',
-					500: '#0ea5e9',
-					600: '#0284c7',
-					700: '#0369a1',
-					800: '#075985',
-					900: '#0c4a6e',
+					50: '#eff6ff',
+					100: '#dbeafe',
+					200: '#bfdbfe',
+					300: '#93c5fd',
+					400: '#60a5fa',
+					500: '#3b82f6',
+					600: '#2563eb',
+					700: '#1d4ed8',
+					800: '#1e40af',
+					900: '#1e3a8a',
 				},
 				success: '#10b981',
 				warning: '#f59e0b',
@@ -123,10 +126,10 @@ export default {
 				},
 				'pulse-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)'
+						boxShadow: '0 0 20px rgba(37, 99, 235, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 30px rgba(14, 165, 233, 0.6)'
+						boxShadow: '0 0 30px rgba(37, 99, 235, 0.6)'
 					}
 				}
 			},

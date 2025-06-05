@@ -1,106 +1,44 @@
 
-import { Shield, AlertTriangle, Target, Clock, CheckCircle } from 'lucide-react';
+import { ShieldCheck, Zap, Filter, Users } from 'lucide-react';
 
 export const SolutionSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8">
-              Imagina un <span className="text-blue-600">Portero Inteligente</span> en tu Línea, 24/7.
-            </h2>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            Presentamos tu <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Portero Inteligente</span>, 24/7.
+          </h2>
+          <p className="text-lg text-gray-600">Así es como Infone protege y optimiza tu flujo de llamadas:</p>
+        </div>
 
-          {/* Paso 1: Lo Urgente */}
-          <div className="mb-16">
-            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-2xl p-8 mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                🥇 Paso 1: Lo Urgente - El Filtro de Intención
-              </h3>
-              <p className="text-xl text-center mb-8">
-                Primero, lo más importante: <strong>Identificar Oro.</strong>
-              </p>
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Paso 1 */}
+          <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg border border-blue-200">
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+              <Zap className="w-4 h-4" /> PRIORIDAD Nº1
             </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-bold text-red-800 mb-2">¿Quiere VENDER?</h4>
-                <div className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold mb-2">
-                  🔴 ALERTA PRIORITARIA!
-                </div>
-                <p className="text-sm text-gray-700">
-                  Notificación instantánea. Esa llamada no se pierde. NUNCA.
-                </p>
-              </div>
-
-              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-bold text-green-800 mb-2">¿Quiere COMPRAR?</h4>
-                <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold mb-2">
-                  💎 LEAD CUALIFICADO
-                </div>
-                <p className="text-sm text-gray-700">
-                  Contacto de alto valor para seguimiento inmediato.
-                </p>
-              </div>
-
-              <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-bold text-blue-800 mb-2">¿Quiere ALQUILAR?</h4>
-                <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold mb-2">
-                  ⚙️ PROTOCOLO OPTIMIZACIÓN
-                </div>
-                <p className="text-sm text-gray-700">
-                  Se activa el sistema de gestión inteligente.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Paso 2: Lo Importante */}
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-2xl p-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-              🎯 Paso 2: Lo Importante - La Optimización del Tiempo
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+              <ShieldCheck className="w-7 h-7 text-blue-600 mr-3" />
+              Filtro de Intención: Identifica Oro al Instante.
             </h3>
-            
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <p className="text-xl mb-6">
-                  Y para el tsunami de llamadas de alquiler... <strong>las convertimos en tiempo para ti.</strong>
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span>Cualifica con TUS criterios (ingresos, contrato, etc.)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span>Lista priorizada de candidatos ideales</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span>Reduce las visitas a la mitad</span>
-                  </div>
-                </div>
-              </div>
+            <p className="text-gray-600 leading-relaxed">
+              Nuestro Asistente IA atiende cada llamada y, en segundos, identifica la intención real. Si quien llama quiere <strong className="text-gray-800">VENDER</strong> o <strong className="text-gray-800">COMPRAR</strong>, te envía una <strong className="text-red-600">ALERTA PRIORITARIA</strong> a tu móvil. Esa llamada de oro nunca más se perderá en el ruido.
+            </p>
+          </div>
 
-              <div className="text-center">
-                <div className="bg-white/20 rounded-xl p-6 backdrop-blur-sm">
-                  <div className="text-4xl font-bold mb-2">50%</div>
-                  <p className="text-lg">Menos visitas inútiles</p>
-                  <div className="text-2xl font-bold mt-4 text-yellow-300">+200% Eficiencia</div>
-                </div>
-              </div>
+          {/* Paso 2 */}
+          <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg border border-blue-200">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+              <Filter className="w-4 h-4" /> OPTIMIZACIÓN
             </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center">
+              <Users className="w-7 h-7 text-green-600 mr-3" />
+              Cualificación Automática: Convierte Ruido en Tiempo.
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Para el tsunami de llamadas de alquiler, el asistente aplica <strong className="text-gray-800">TUS criterios</strong> (ingresos, contrato, etc.), cualifica a los candidatos y te entrega una lista priorizada. Resultado: menos visitas, inquilinos de más calidad y horas de vuelta para tus agentes.
+            </p>
           </div>
         </div>
       </div>

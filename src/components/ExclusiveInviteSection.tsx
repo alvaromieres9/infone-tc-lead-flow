@@ -1,39 +1,46 @@
 
-import { Users, Star, Zap } from 'lucide-react';
+import { Award, Users, AlertTriangle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ArrowDown } from 'lucide-react';
 
 export const ExclusiveInviteSection = () => {
-  return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8">
-            Solo 5 Inmobiliarias. <br />
-            <span className="text-blue-600">
-              Programa Piloto Exclusivo.
-            </span>
-          </h2>
+  const scrollToForm = () => {
+    const formSection = document.getElementById('cta-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-          <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Buscamos <strong>5 inmobiliarias de Madrid</strong> para probar y perfeccionar esta herramienta. 
-            Tu feedback directo nos ayuda a crear la solución definitiva. <span className="text-blue-600 font-semibold">Acceso gratuito durante todo el piloto.</span>
+  return (
+    <section className="py-16 md:py-24 bg-gray-800 text-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto">
+          <Award className="w-12 h-12 text-blue-400 mx-auto mb-6" />
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Solo 5 Inmobiliarias. <br />
+            <span className="text-blue-400">Programa Piloto Exclusivo.</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+            Buscamos <strong className="text-white">5 inmobiliarias de Madrid</strong> para probar y perfeccionar esta herramienta. 
+            Tu feedback directo nos ayuda a crear la solución definitiva. <span className="text-blue-400 font-semibold">Acceso gratuito durante todo el piloto.</span>
           </p>
 
-          {/* Progress Bar */}
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 mb-8">
+          {/* Barra de Progreso y Plazas */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                <Users className="w-5 h-5 text-blue-600" />
+              <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                <Users className="w-5 h-5 text-blue-400" />
                 Programa Piloto
               </h3>
-              <span className="text-red-600 font-bold">¡Solo 2 plazas restantes!</span>
+              <span className="text-red-400 font-bold">¡Solo 2 plazas restantes!</span>
             </div>
             
             <div className="relative">
-              <div className="w-full bg-gray-200 rounded-full h-4">
+              <div className="w-full bg-gray-600 rounded-full h-4">
                 <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-4 rounded-full transition-all duration-1000 ease-out" 
                      style={{ width: '60%' }}></div>
               </div>
-              <div className="flex justify-between text-sm text-gray-600 mt-2">
+              <div className="flex justify-between text-sm text-gray-300 mt-2">
                 <span>0 plazas</span>
                 <span className="font-semibold">3 de 5 OCUPADAS</span>
                 <span>5 plazas máx</span>
@@ -41,32 +48,25 @@ export const ExclusiveInviteSection = () => {
             </div>
           </div>
 
-          {/* Benefits */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-              <Star className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-900 mb-3">Acceso Gratuito</h3>
-              <p className="text-gray-600 text-sm">
-                Uso completo sin coste durante todo el desarrollo.
-              </p>
+          {/* Contador Regresivo */}
+          <div className="bg-red-500/20 border border-red-400 rounded-lg p-4 mb-10 max-w-md mx-auto">
+            <div className="flex items-center justify-center gap-2 text-red-300 font-semibold">
+              <AlertTriangle className="w-5 h-5 animate-ping" />
+              Inscripciones cierran en:
             </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border border-green-200">
-              <Zap className="w-12 h-12 text-green-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-900 mb-3">Tu Feedback Cuenta</h3>
-              <p className="text-gray-600 text-sm">
-                Ayudas a diseñar la herramienta perfecta para inmobiliarias.
-              </p>
-            </div>
-
-            <div className="bg-yellow-50 rounded-xl p-6 border border-yellow-200">
-              <Users className="w-12 h-12 text-yellow-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-900 mb-3">Ventaja Competitiva</h3>
-              <p className="text-gray-600 text-sm">
-                Serás de las primeras en dominar esta tecnología.
-              </p>
+            <div className="text-center text-3xl font-bold text-white mt-2">
+              03 Días : 10 Horas : 25 Min : 15 Seg
             </div>
           </div>
+
+          <Button 
+            onClick={scrollToForm}
+            size="lg"
+            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-6 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Acceder al Programa Piloto
+            <ArrowDown className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </div>
     </section>
