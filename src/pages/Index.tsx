@@ -1,22 +1,20 @@
 
 import { HeroSection } from '@/components/HeroSection';
-import { ProblemSection } from '@/components/ProblemSection';
-import { IntroSection } from '@/components/IntroSection';
-import { ValuePropSection } from '@/components/ValuePropSection';
-import { PilotSection } from '@/components/PilotSection';
+import { TruthSection } from '@/components/TruthSection';
+import { SolutionSection } from '@/components/SolutionSection';
+import { ExclusiveInviteSection } from '@/components/ExclusiveInviteSection';
 import { UrgencySection } from '@/components/UrgencySection';
-import { CTASection } from '@/components/CTASection';
+import { FinalCTASection } from '@/components/FinalCTASection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white font-inter">
+    <div className="min-h-screen bg-white font-inter">
       <HeroSection />
-      <ProblemSection />
-      <IntroSection />
-      <ValuePropSection />
-      <PilotSection />
+      <TruthSection />
+      <SolutionSection />
+      <ExclusiveInviteSection />
       <UrgencySection />
-      <CTASection />
+      <FinalCTASection />
     </div>
   );
 };
