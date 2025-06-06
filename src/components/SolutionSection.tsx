@@ -1,5 +1,6 @@
 
-import { ShieldCheck, Zap, Filter, Users, Phone, CheckCircle, Calendar, ArrowDown } from 'lucide-react';
+import { ShieldCheck, Zap, Filter, Users, Phone, CheckCircle, Calendar, ArrowDown, Smartphone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export const SolutionSection = () => {
   return (
@@ -20,24 +21,55 @@ export const SolutionSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center">
               <ShieldCheck className="w-7 h-7 text-blue-600 mr-3" />
-              Filtro de Intención: Identifica Oro al Instante.
+              Filtro de Intención: Identifica Vendedores y Compradores al Instante.
             </h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Nuestro Asistente IA atiende cada llamada y, en segundos, identifica la intención real. Si quien llama quiere <strong className="text-gray-800">VENDER</strong> o <strong className="text-gray-800">COMPRAR</strong>, te envía una <strong className="text-red-600">ALERTA PRIORITARIA</strong> a tu móvil. Esa llamada de oro nunca más se perderá en el ruido.
+              Nuestro Asistente atenderá cada llamada y, en segundos, identifica la intención real. Si quien llama quiere <strong className="text-gray-800">VENDER</strong> o <strong className="text-gray-800">COMPRAR</strong>, te envía una <strong className="text-red-600">ALERTA PRIORITARIA</strong> a tu móvil. Esa llamada de oro nunca más se perderá en el ruido.
             </p>
 
-            {/* Ejemplo de Alerta */}
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-              <div className="flex items-center gap-2 text-red-700 font-semibold mb-2">
-                <Phone className="w-5 h-5 animate-pulse" />
-                ALERTA PRIORITARIA - CAPTACIÓN
+            {/* Ejemplo de Alerta con WhatsApp */}
+            <div className="grid md:grid-cols-2 gap-6 items-center">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+                <div className="flex items-center gap-2 text-red-700 font-bold text-lg mb-4">
+                  <Phone className="w-6 h-6 animate-pulse" />
+                  🚨 ALERTA PRIORITARIA
+                </div>
+                <div className="bg-red-100 border border-red-300 rounded-lg p-4 mb-4">
+                  <p className="font-bold text-red-800 text-xl mb-2">
+                    PROPIETARIO INTERESADO EN VENDER
+                  </p>
+                  <div className="space-y-2 text-gray-700">
+                    <p><strong>Propiedad:</strong> Piso 3 dormitorios</p>
+                    <p><strong>Zona:</strong> Salamanca, Madrid</p>
+                    <p><strong>Valoración estimada:</strong> €650.000</p>
+                    <p><strong>Urgencia:</strong> Alta - Necesita vender en 2 meses</p>
+                    <p><strong>Contacto:</strong> María García - 666 123 456</p>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600">⏰ Llamada recibida: Hace 2 minutos</p>
               </div>
-              <p className="text-gray-700 text-sm">
-                📞 <strong>Propietario interesado en VENDER</strong><br />
-                📍 Piso 3 dormitorios, zona Salamanca<br />
-                💰 Valoración estimada: €650.000<br />
-                ⏰ Llamada recibida: Hace 2 minutos
-              </p>
+
+              <div className="flex justify-center">
+                <div className="bg-white rounded-2xl shadow-lg p-4 max-w-xs">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Smartphone className="w-8 h-8 text-gray-700" />
+                    <span className="font-semibold text-gray-800">Tu móvil</span>
+                  </div>
+                  
+                  <div className="bg-green-500 rounded-lg p-3 text-white">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-bold">InfOne</span>
+                      <span className="text-xs opacity-90">ahora</span>
+                    </div>
+                    <p className="text-sm">
+                      🚨 <strong>LEAD DE ORO</strong><br />
+                      Propietario quiere VENDER<br />
+                      📍 Salamanca - €650K<br />
+                      📞 María G. - 666123456
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -56,40 +88,91 @@ export const SolutionSection = () => {
               Para el tsunami de llamadas de alquiler, el asistente aplica <strong className="text-gray-800">TUS criterios</strong> y cualifica automáticamente a los candidatos antes de que lleguen a tu agenda.
             </p>
 
-            {/* Ejemplo de Conversación */}
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-600">Llamada en curso...</span>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-blue-100 rounded-lg p-3">
-                  <p className="text-gray-800"><strong>IA:</strong> "Buenos días, soy el asistente de Inmobiliaria López. ¿Le interesa el piso de 2 habitaciones en la calle Almagro de €2.500/mes?"</p>
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Ejemplo de Conversación */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-gray-600">Llamada en curso...</span>
                 </div>
                 
-                <div className="bg-white rounded-lg p-3">
-                  <p className="text-gray-800"><strong>Cliente:</strong> "Sí, ¿cuánto cuesta al mes?"</p>
-                </div>
-                
-                <div className="bg-blue-100 rounded-lg p-3">
-                  <p className="text-gray-800"><strong>IA:</strong> "€2.500/mes. Para optimizar su visita, ¿podría confirmarme sus ingresos mensuales y si tiene contrato indefinido?"</p>
-                </div>
-                
-                <div className="bg-white rounded-lg p-3">
-                  <p className="text-gray-800"><strong>Cliente:</strong> "Gano €4.200 al mes y sí, tengo indefinido. Somos una pareja."</p>
-                </div>
-                
-                <div className="bg-green-100 rounded-lg p-3 border border-green-300">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <p className="text-green-800 font-semibold">Lead cualificado automáticamente</p>
+                <div className="space-y-4">
+                  <div className="bg-blue-100 rounded-lg p-3">
+                    <p className="text-gray-800"><strong>IA:</strong> "Buenos días, soy el asistente de Inmobiliaria López. ¿Le interesa el piso de 2 habitaciones en la calle Almagro?"</p>
                   </div>
-                  <p className="text-green-700 text-sm mt-1">
-                    ✅ Ingresos superiores al 40% del alquiler<br />
-                    ✅ Contrato indefinido<br />
-                    ✅ Perfil ideal para visita
-                  </p>
+                  
+                  <div className="bg-white rounded-lg p-3">
+                    <p className="text-gray-800"><strong>Cliente:</strong> "Sí, me gustaría saber más detalles."</p>
+                  </div>
+                  
+                  <div className="bg-blue-100 rounded-lg p-3">
+                    <p className="text-gray-800"><strong>IA:</strong> "Perfecto. Para optimizar su visita, ¿podría confirmarme sus ingresos mensuales y si tiene contrato indefinido?"</p>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg p-3">
+                    <p className="text-gray-800"><strong>Cliente:</strong> "Gano €4.200 al mes y sí, tengo indefinido. Somos una pareja."</p>
+                  </div>
+                  
+                  <div className="bg-green-100 rounded-lg p-3 border border-green-300">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
+                      <p className="text-green-800 font-semibold">Lead cualificado automáticamente</p>
+                    </div>
+                    <p className="text-green-700 text-sm mt-1">
+                      ✅ Ingresos superiores al 40% del alquiler<br />
+                      ✅ Contrato indefinido<br />
+                      ✅ Perfil ideal para visita
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ranking de Leads */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+                  🏆 Leads Organizados por Prioridad
+                </h4>
+                
+                {/* Lead Oro */}
+                <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-300 rounded-lg p-4 relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+                  <div className="ml-4">
+                    <p className="font-bold text-yellow-800">Carlos M. - Perfil ORO</p>
+                    <p className="text-sm text-gray-700">€5.200/mes • Indefinido • Pareja sin hijos</p>
+                    <p className="text-xs text-green-600 font-medium">✅ Cumple 100% criterios</p>
+                    <Button size="sm" className="mt-2 bg-yellow-600 hover:bg-yellow-700">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      Agendar Visita
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Lead Plata */}
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-300 rounded-lg p-4 relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+                  <div className="ml-4">
+                    <p className="font-bold text-gray-800">Ana L. - Perfil PLATA</p>
+                    <p className="text-sm text-gray-700">€4.000/mes • Indefinido • Sola</p>
+                    <p className="text-xs text-yellow-600 font-medium">⚠️ Cumple 80% criterios</p>
+                    <Button size="sm" variant="outline" className="mt-2">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      Agendar Visita
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Lead Bronce */}
+                <div className="bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-300 rounded-lg p-4 relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+                  <div className="ml-4">
+                    <p className="font-bold text-orange-800">Miguel R. - Perfil BRONCE</p>
+                    <p className="text-sm text-gray-700">€3.500/mes • Temporal • Estudiante</p>
+                    <p className="text-xs text-red-600 font-medium">⚠️ Cumple 60% criterios</p>
+                    <Button size="sm" variant="outline" className="mt-2">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      Agendar Visita
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
