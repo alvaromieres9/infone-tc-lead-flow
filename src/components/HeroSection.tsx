@@ -25,32 +25,44 @@ export const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            ¿Publicas en <span className="text-yellow-500">Idealista</span>?<br />
+            ¿Publicas en <span className="text-[#a3c500]">Idealista</span>?<br />
             Tu teléfono <span className="text-red-500">explota</span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle with highlighted pain point */}
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-            ¿Y si entre tantas llamadas perdidas se te escapa un propietario que quería vender?
+            ¿Y si entre tantas llamadas perdidas se te escapa un propietario que quería{' '}
+            <span className="bg-yellow-200 px-2 py-1 rounded font-bold text-gray-900">VENDER</span>?
           </p>
 
-          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-            Te invitamos a co-crear gratis un Asistente IA que 
-            <strong className="text-blue-700"> identifica y protege tus llamadas más valiosas.</strong>
-          </p>
+          {/* Call to Action Invitation - More Visual */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8 mb-10 max-w-4xl mx-auto shadow-lg">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xl">🤖</span>
+              </div>
+            </div>
+            <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
+              Te invitamos a co-crear gratis un <strong className="text-blue-700">Asistente IA</strong> que 
+              <strong className="text-blue-700"> identifica y protege tus llamadas más valiosas.</strong>
+            </p>
+          </div>
 
           {/* Key Benefits Pills */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-sm flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="text-green-500 text-lg">✅</span>
               <span className="text-gray-700 font-medium">100% Gratuito</span>
             </div>
             <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-sm flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-blue-500 text-lg">🎯</span>
               <span className="text-gray-700 font-medium">Filtra Automáticamente</span>
             </div>
             <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-sm flex items-center gap-2">
-              <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+              <span className="text-pink-500 text-lg">💝</span>
               <span className="text-gray-700 font-medium">Ahorra Horas</span>
             </div>
           </div>
