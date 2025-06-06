@@ -35,13 +35,17 @@ export const HeroSection = () => {
             <span className="bg-yellow-200 px-2 py-1 rounded font-bold text-gray-900">VENDER</span>?
           </p>
 
-          {/* Call to Action Invitation - Much Thinner */}
-          <div className="flex items-center justify-center gap-3 mb-10 max-w-4xl mx-auto">
-            <span className="text-2xl">🤖</span>
-            <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
-              Te invitamos a co-crear gratis un <strong className="text-blue-700">Asistente IA</strong> que 
-              <strong className="text-blue-700"> identifica y protege tus llamadas más valiosas.</strong>
-            </p>
+          {/* Call to Action Invitation - Highlighted Box */}
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-10 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-lg">🤖</span>
+              </div>
+              <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
+                Te invitamos a co-crear gratis un <strong className="text-blue-700">Asistente IA</strong> que 
+                <strong className="text-blue-700"> identifica y protege tus llamadas más valiosas.</strong>
+              </p>
+            </div>
           </div>
 
           {/* Key Benefits Pills */}
