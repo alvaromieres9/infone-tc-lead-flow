@@ -1,3 +1,4 @@
+
 import { ShieldCheck, Zap, Filter, Users, Phone, CheckCircle, Calendar, ArrowDown, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -72,7 +73,7 @@ export const SolutionSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center">
               <Users className="w-7 h-7 text-green-600 mr-3" />
-              Cualificación Automática: Convierte Ruido en Tiempo.
+              Cualificación Automática: Alquila en la mitad de visitas.
             </h3>
             <p className="text-gray-600 leading-relaxed mb-6">
               Para el tsunami de llamadas de alquiler, el asistente aplica <strong className="text-gray-800">TUS criterios</strong> y cualifica automáticamente a los candidatos antes de que lleguen a tu agenda.
@@ -88,11 +89,11 @@ export const SolutionSection = () => {
                 
                 <div className="space-y-4">
                   <div className="bg-blue-100 rounded-lg p-3">
-                    <p className="text-gray-800"><strong>IA:</strong> "Buenos días, soy el asistente de Inmobiliaria López. ¿Le interesa el piso de 2 habitaciones en la calle Almagro?"</p>
+                    <p className="text-gray-800"><strong>IA:</strong> "Buenos días, soy el asistente de Inmobiliaria López. ¿Le interesa el piso de 2 habitaciones en la calle Almagro por 2.000€?"</p>
                   </div>
                   
                   <div className="bg-white rounded-lg p-3">
-                    <p className="text-gray-800"><strong>Cliente:</strong> "Sí, me gustaría saber más detalles."</p>
+                    <p className="text-gray-800"><strong>Cliente:</strong> "Sí, me gustaría agendar una visita"</p>
                   </div>
                   
                   <div className="bg-blue-100 rounded-lg p-3">
@@ -126,7 +127,10 @@ export const SolutionSection = () => {
                 {/* Lead Oro */}
                 <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-300 rounded-lg p-4 relative">
                   <div className="absolute -top-2 -left-2 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-                  <div className="ml-4">
+                  <div className="absolute -top-2 -right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                    ✓ 100% Match
+                  </div>
+                  <div className="ml-4 mr-8">
                     <p className="font-bold text-yellow-800">Carlos M. - Perfil ORO</p>
                     <p className="text-sm text-gray-700">€5.200/mes • Indefinido • Pareja sin hijos</p>
                     <p className="text-xs text-green-600 font-medium">✅ Cumple 100% criterios</p>
@@ -140,7 +144,10 @@ export const SolutionSection = () => {
                 {/* Lead Plata */}
                 <div className="bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-300 rounded-lg p-4 relative">
                   <div className="absolute -top-2 -left-2 w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-                  <div className="ml-4">
+                  <div className="absolute -top-2 -right-2 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                    ⚠ 80% Match
+                  </div>
+                  <div className="ml-4 mr-8">
                     <p className="font-bold text-gray-800">Ana L. - Perfil PLATA</p>
                     <p className="text-sm text-gray-700">€4.000/mes • Indefinido • Sola</p>
                     <p className="text-xs text-yellow-600 font-medium">⚠️ Cumple 80% criterios</p>
@@ -154,9 +161,12 @@ export const SolutionSection = () => {
                 {/* Lead Bronce */}
                 <div className="bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-300 rounded-lg p-4 relative">
                   <div className="absolute -top-2 -left-2 w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-                  <div className="ml-4">
+                  <div className="absolute -top-2 -right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                    ⚠ 60% Match
+                  </div>
+                  <div className="ml-4 mr-8">
                     <p className="font-bold text-orange-800">Miguel R. - Perfil BRONCE</p>
-                    <p className="text-sm text-gray-700">€3.500/mes • Temporal • Estudiante</p>
+                    <p className="text-sm text-gray-700">€3.500/mes • Temporal • Solo</p>
                     <p className="text-xs text-red-600 font-medium">⚠️ Cumple 60% criterios</p>
                     <Button size="sm" variant="outline" className="mt-2">
                       <Calendar className="w-4 h-4 mr-1" />
