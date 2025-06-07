@@ -21,52 +21,72 @@ export const SolutionSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center">
               <ShieldCheck className="w-7 h-7 text-blue-600 mr-3" />
-              Filtro de Intención: Identifica Vendedores y Compradores al Instante.
+              <span className="text-blue-600">Filtro de Intención</span>: Identifica <span className="text-blue-600">Vendedores</span> y <span className="text-blue-600">Compradores</span> al Instante.
             </h3>
             <p className="text-gray-600 leading-relaxed mb-6">
               Nuestro Asistente atenderá cada llamada y, en segundos, identifica la intención real. Si quien llama quiere <strong className="text-gray-800">VENDER</strong> o <strong className="text-gray-800">COMPRAR</strong>, te envía una <strong className="text-red-600">ALERTA PRIORITARIA</strong> a tu móvil. Esa llamada de oro nunca más se perderá en el ruido.
             </p>
 
-            {/* Ejemplo de Alerta con WhatsApp */}
-            <div className="grid md:grid-cols-2 gap-6 items-center">
-              <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-                <div className="flex items-center gap-2 text-red-700 font-bold text-lg mb-4">
-                  <Phone className="w-6 h-6 animate-pulse" />
-                  🚨 ALERTA PRIORITARIA
-                </div>
-                <div className="bg-red-100 border border-red-300 rounded-lg p-4 mb-4">
-                  <p className="font-bold text-red-800 text-xl mb-2">
-                    PROPIETARIO INTERESADO EN VENDER
-                  </p>
-                  <div className="space-y-2 text-gray-700">
-                    <p><strong>Propiedad:</strong> Piso 3 dormitorios</p>
-                    <p><strong>Zona:</strong> Salamanca, Madrid</p>
-                    <p><strong>Valoración estimada:</strong> €650.000</p>
-                    <p><strong>Urgencia:</strong> Alta - Necesita vender en 2 meses</p>
-                    <p><strong>Contacto:</strong> María García - 666 123 456</p>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600">⏰ Llamada recibida: Hace 2 minutos</p>
+            {/* Banner Rojo Integrado con Mapa */}
+            <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-300 rounded-xl p-8 relative overflow-hidden">
+              {/* Fondo de mapa sutil */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="w-full h-full bg-gradient-to-br from-yellow-100 to-green-100 rounded-xl"></div>
+                <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full"></div>
+                <div className="absolute bottom-8 left-8 w-2 h-2 bg-blue-400 rounded-full"></div>
+                <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-yellow-400 rounded-full"></div>
               </div>
 
-              <div className="flex justify-center">
-                <div className="bg-white rounded-2xl shadow-lg p-4 max-w-xs">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Smartphone className="w-8 h-8 text-gray-700" />
-                    <span className="font-semibold text-gray-800">Tu móvil</span>
-                  </div>
-                  
-                  <div className="bg-green-500 rounded-lg p-3 text-white">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="font-bold">InfOne</span>
-                      <span className="text-xs opacity-90">ahora</span>
+              {/* Contenido principal */}
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 text-red-700 font-bold text-xl mb-6">
+                  <Phone className="w-7 h-7 animate-pulse" />
+                  🚨 ALERTA PRIORITARIA - PROPIETARIO INTERESADO EN VENDER
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  {/* Información de la propiedad */}
+                  <div className="bg-white/90 backdrop-blur-sm border border-red-200 rounded-lg p-6 shadow-lg">
+                    <div className="space-y-3 text-gray-800">
+                      <p className="text-lg font-bold text-red-800 mb-4">María García quiere VENDER</p>
+                      <p><span className="text-lg">🏠</span> <strong>Propiedad:</strong> Piso 3 dormitorios</p>
+                      <p><span className="text-lg">📍</span> <strong>Zona:</strong> Salamanca, Madrid</p>
+                      <p><span className="text-lg">💰</span> <strong>Valoración estimada:</strong> €650.000</p>
+                      <p><span className="text-lg">⚡</span> <strong>Urgencia:</strong> Alta - Necesita vender en 2 meses</p>
+                      <p><span className="text-lg">📞</span> <strong>Contacto:</strong> María García - 666 123 456</p>
                     </div>
-                    <p className="text-sm">
-                      🚨 <strong>LEAD DE ORO</strong><br />
-                      Propietario quiere VENDER<br />
-                      📍 Salamanca - €650K<br />
-                      📞 María G. - 666123456
-                    </p>
+                    <p className="text-sm text-gray-600 mt-4 pt-3 border-t border-gray-200">⏰ Llamada recibida: Hace 2 minutos</p>
+                  </div>
+
+                  {/* Indicador de ubicación en el mapa */}
+                  <div className="flex flex-col items-center justify-center">
+                    <div className="relative">
+                      {/* Pin de ubicación */}
+                      <div className="w-16 h-16 bg-red-500 rounded-full relative shadow-lg">
+                        <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
+                        <div className="relative w-full h-full bg-red-500 rounded-full flex items-center justify-center">
+                          <div className="w-6 h-6 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                      {/* Texto de ubicación */}
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                        <span className="text-gray-700 font-bold text-lg tracking-wider">SALAMANCA</span>
+                      </div>
+                    </div>
+                    
+                    {/* Notificación WhatsApp */}
+                    <div className="mt-8 bg-green-500 rounded-lg p-3 text-white max-w-xs shadow-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="font-bold">InfOne</span>
+                        <span className="text-xs opacity-90">ahora</span>
+                      </div>
+                      <p className="text-sm">
+                        🚨 <strong>LEAD DE ORO</strong><br />
+                        Propietario quiere VENDER<br />
+                        📍 Salamanca - €650K<br />
+                        📞 María G. - 666123456
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
