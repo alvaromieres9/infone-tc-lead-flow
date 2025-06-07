@@ -31,14 +31,14 @@ export const HeroSection = () => {
 
           {/* Subtitle with highlighted pain point */}
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-            ¿Y si entre tantas llamadas perdidas se te escapa un propietario que quería{' '}
+            ¿Y si entre tantas llamadas perdidas **se te escapa un propietario** que quería{' '}
             <span className="bg-yellow-200 px-2 py-1 rounded font-bold text-gray-900">VENDER</span>?
           </p>
 
           {/* Call to Action Invitation - Highlighted Box */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-10 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-lg">🤖</span>
               </div>
               <p className="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
@@ -59,7 +59,7 @@ export const HeroSection = () => {
               <span className="text-gray-700 font-medium">Filtra Automáticamente</span>
             </div>
             <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-sm flex items-center gap-2">
-              <span className="text-pink-500 text-lg">💝</span>
+              <span className="text-lg">⏰</span>
               <span className="text-gray-700 font-medium">Ahorra Horas</span>
             </div>
           </div>
