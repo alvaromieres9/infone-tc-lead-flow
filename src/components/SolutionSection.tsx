@@ -29,14 +29,6 @@ export const SolutionSection = () => {
 
             {/* Banner Rojo Integrado con Mapa */}
             <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-300 rounded-xl p-8 relative overflow-hidden">
-              {/* Fondo de mapa sutil */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="w-full h-full bg-gradient-to-br from-yellow-100 to-green-100 rounded-xl"></div>
-                <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full"></div>
-                <div className="absolute bottom-8 left-8 w-2 h-2 bg-blue-400 rounded-full"></div>
-                <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-yellow-400 rounded-full"></div>
-              </div>
-
               {/* Contenido principal */}
               <div className="relative z-10">
                 <div className="flex items-center gap-3 text-red-700 font-bold text-xl mb-6">
@@ -58,24 +50,30 @@ export const SolutionSection = () => {
                     <p className="text-sm text-gray-600 mt-4 pt-3 border-t border-gray-200">⏰ Llamada recibida: Hace 2 minutos</p>
                   </div>
 
-                  {/* Indicador de ubicación en el mapa */}
-                  <div className="flex flex-col items-center justify-center">
-                    <div className="relative">
-                      {/* Pin de ubicación */}
-                      <div className="w-16 h-16 bg-red-500 rounded-full relative shadow-lg">
-                        <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
-                        <div className="relative w-full h-full bg-red-500 rounded-full flex items-center justify-center">
-                          <div className="w-6 h-6 bg-white rounded-full"></div>
+                  {/* Mapa con pin de ubicación */}
+                  <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                    {/* Mapa de fondo */}
+                    <img 
+                      src="/lovable-uploads/15c38f47-cfce-4a54-bf2f-31665aefbd44.png" 
+                      alt="Mapa de ubicación"
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Pin de ubicación con animación */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <div className="relative">
+                        {/* Pin animado */}
+                        <div className="w-8 h-8 bg-red-500 rounded-full relative shadow-lg">
+                          <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
+                          <div className="relative w-full h-full bg-red-500 rounded-full flex items-center justify-center">
+                            <div className="w-3 h-3 bg-white rounded-full"></div>
+                          </div>
                         </div>
-                      </div>
-                      {/* Texto de ubicación */}
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                        <span className="text-gray-700 font-bold text-lg tracking-wider">SALAMANCA</span>
                       </div>
                     </div>
                     
-                    {/* Notificación WhatsApp */}
-                    <div className="mt-8 bg-green-500 rounded-lg p-3 text-white max-w-xs shadow-lg">
+                    {/* Notificación WhatsApp flotante */}
+                    <div className="absolute bottom-4 right-4 bg-green-500 rounded-lg p-3 text-white max-w-xs shadow-lg">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="font-bold">InfOne</span>
                         <span className="text-xs opacity-90">ahora</span>
