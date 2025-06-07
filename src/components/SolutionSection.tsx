@@ -1,4 +1,3 @@
-
 import { ShieldCheck, Zap, Filter, Users, Phone, CheckCircle, Calendar, ArrowDown, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -50,7 +49,7 @@ export const SolutionSection = () => {
                     <p className="text-sm text-gray-600 mt-4 pt-3 border-t border-gray-200">⏰ Llamada recibida: Hace 2 minutos</p>
                   </div>
 
-                  {/* Mapa con pin de ubicación */}
+                  {/* Mapa sin pin ni notificación */}
                   <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
                     {/* Mapa de fondo */}
                     <img 
@@ -58,33 +57,6 @@ export const SolutionSection = () => {
                       alt="Mapa de ubicación"
                       className="w-full h-full object-cover"
                     />
-                    
-                    {/* Pin de ubicación con animación */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="relative">
-                        {/* Pin animado */}
-                        <div className="w-8 h-8 bg-red-500 rounded-full relative shadow-lg">
-                          <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
-                          <div className="relative w-full h-full bg-red-500 rounded-full flex items-center justify-center">
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Notificación WhatsApp flotante */}
-                    <div className="absolute bottom-4 right-4 bg-green-500 rounded-lg p-3 text-white max-w-xs shadow-lg">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="font-bold">InfOne</span>
-                        <span className="text-xs opacity-90">ahora</span>
-                      </div>
-                      <p className="text-sm">
-                        🚨 <strong>LEAD DE ORO</strong><br />
-                        Propietario quiere VENDER<br />
-                        📍 Salamanca - €650K<br />
-                        📞 María G. - 666123456
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
