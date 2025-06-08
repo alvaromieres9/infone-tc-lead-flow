@@ -49,13 +49,19 @@ export const ExclusiveInviteSection = () => {
           </div>
 
           {/* Contador Regresivo */}
-          <div className="bg-red-500/20 border border-red-400 rounded-lg p-4 mb-10 max-w-md mx-auto">
-            <div className="flex items-center justify-center gap-2 text-red-300 font-semibold">
+          <div className="bg-red-500/20 border border-red-400 rounded-lg p-4 mb-10 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 text-red-300 font-semibold mb-3">
               <AlertTriangle className="w-5 h-5 animate-ping" />
               Inscripciones cierran en:
             </div>
-            <div className="text-center text-3xl font-bold text-white mt-2">
-              03 Días : 10 Horas : 25 Min : 15 Seg
+            <div className="flex items-center justify-center gap-4 text-2xl md:text-3xl font-bold text-white">
+              <span>03 Días</span>
+              <span>:</span>
+              <span>10 Horas</span>
+              <span>:</span>
+              <span>25 Min</span>
+              <span>:</span>
+              <span>15 Seg</span>
             </div>
           </div>
 
