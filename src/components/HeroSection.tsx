@@ -31,7 +31,7 @@ export const HeroSection = () => {
 
           {/* Subtitle with highlighted pain point */}
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-            ¿Y si entre tantas llamadas perdidas **se te escapa un propietario** que quería{' '}
+            ¿Y si entre tantas llamadas perdidas <strong>se te escapa un propietario</strong> que quería{' '}
             <span className="bg-yellow-200 px-2 py-1 rounded font-bold text-gray-900">VENDER</span>?
           </p>
 
