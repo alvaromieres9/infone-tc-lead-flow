@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // base: "/inmo/", // 👈 ¡ESTA LÍNEA ES CLAVE!
+  base: "/inmo/", // 👈 ¡ESTA LÍNEA ES CLAVE!
 
   server: {
     host: "::",
