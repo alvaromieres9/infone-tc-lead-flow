@@ -17,6 +17,14 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto animate-fade-in">
+              {/* Imagen centrada encima del badge */}
+          <div className="flex justify-center">
+            <img 
+              src=".//lovable-uploads/logo-infone.png" 
+              alt="Imagen destacada" 
+              className="w-32 h-32 object-contain"
+            />
+          </div>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-8 border border-blue-200">
             <Zap className="w-4 h-4" />

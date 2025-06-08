@@ -18,10 +18,16 @@ export const SolutionSection = () => {
             <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">
               <Zap className="w-4 h-4" /> PRIORIDAD Nº1
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center">
-              <ShieldCheck className="w-7 h-7 text-blue-600 mr-3" />
-              <span className="text-blue-600">Filtro de Intención</span>: Identifica <span className="text-blue-600">Vendedores</span> y <span className="text-blue-600">Compradores</span> al Instante.
-            </h3>
+
+            <div className="flex items-center mb-3">
+              <ShieldCheck className="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" />
+              <h3 className="text-2xl font-bold text-gray-900 leading-snug">
+                <span className="text-blue-600">Filtro de Intención:</span> Identifica{" "}
+                <span className="text-blue-600">Vendedores</span> y{" "}
+                <span className="text-blue-600">Compradores</span> al Instante.
+              </h3>
+            </div>
+
             <p className="text-gray-600 leading-relaxed mb-6">
               Nuestro Asistente atenderá cada llamada y, en segundos, identifica la intención real. Si quien llama quiere <strong className="text-gray-800">VENDER</strong> o <strong className="text-gray-800">COMPRAR</strong>, te envía una <strong className="text-red-600">ALERTA PRIORITARIA</strong> a tu móvil. Esa llamada de oro nunca más se perderá en el ruido.
             </p>
@@ -53,7 +59,7 @@ export const SolutionSection = () => {
                   <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
                     {/* Mapa de fondo */}
                     <img 
-                      src="/lovable-uploads/15c38f47-cfce-4a54-bf2f-31665aefbd44.png" 
+                      src="./lovable-uploads/15c38f47-cfce-4a54-bf2f-31665aefbd44.png" 
                       alt="Mapa de ubicación"
                       className="w-full h-full object-cover"
                     />

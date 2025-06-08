@@ -1,9 +1,33 @@
-
-import { Award, Users, AlertTriangle } from 'lucide-react';
+import { Award, Users, AlertTriangle, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export const ExclusiveInviteSection = () => {
+  const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
+
+  function getTimeRemaining() {
+    const cycleDuration = 3 * 24 * 60 * 60 * 1000; // 3 días en ms
+    const now = new Date().getTime();
+    const startTime = new Date('2025-06-08T00:00:00').getTime(); // Fecha base del ciclo
+    const elapsed = (now - startTime) % cycleDuration;
+    const remaining = cycleDuration - elapsed;
+
+    const totalSeconds = Math.floor(remaining / 1000);
+    const days = Math.floor(totalSeconds / (3600 * 24));
+    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return { days, hours, minutes, seconds };
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft(getTimeRemaining());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToForm = () => {
     const formSection = document.getElementById('cta-form');
     if (formSection) {
@@ -55,13 +79,13 @@ export const ExclusiveInviteSection = () => {
               Inscripciones cierran en:
             </div>
             <div className="flex items-center justify-center gap-4 text-2xl md:text-3xl font-bold text-white">
-              <span>03 Días</span>
+              <span>{String(timeLeft.days).padStart(2, '0')} Días</span>
               <span>:</span>
-              <span>10 Horas</span>
+              <span>{String(timeLeft.hours).padStart(2, '0')} Horas</span>
               <span>:</span>
-              <span>25 Min</span>
+              <span>{String(timeLeft.minutes).padStart(2, '0')} Min</span>
               <span>:</span>
-              <span>15 Seg</span>
+              <span>{String(timeLeft.seconds).padStart(2, '0')} Seg</span>
             </div>
           </div>
 

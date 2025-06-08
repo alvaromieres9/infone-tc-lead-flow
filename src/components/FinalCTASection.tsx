@@ -15,19 +15,39 @@ export const FinalCTASection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    setTimeout(() => {
+  try {
+    const response = await fetch('https://infone.es/inmo/send-email.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
       toast({
         title: "¡Solicitud Enviada!",
         description: "Te contactaremos en las próximas 24 horas para confirmar tu acceso al piloto.",
       });
-      setIsSubmitting(false);
       setFormData({ name: '', agency: '', email: '' });
-    }, 2000);
-  };
+    } else {
+      toast({
+        title: "Error al enviar",
+        description: "Ocurrió un problema al enviar el formulario. Intenta nuevamente.",
+      });
+    }
+  } catch (error) {
+    toast({
+      title: "Error de conexión",
+      description: "No se pudo conectar con el servidor. Verifica tu conexión o intenta más tarde.",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
