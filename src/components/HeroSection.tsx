@@ -57,7 +57,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Key Benefits Pills */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <div className="hidden md:flex flex-wrap justify-center gap-4 mb-10">
             <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-sm flex items-center gap-2">
               <span className="text-green-500 text-lg">✅</span>
               <span className="text-gray-700 font-medium">100% Gratuito</span>

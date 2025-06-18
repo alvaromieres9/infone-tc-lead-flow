@@ -3,14 +3,13 @@ import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 
 export const ExclusiveInviteSection = () => {
-  const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
+  const CYCLE_DURATION = 3 * 24 * 60 * 60 * 1000; // 3 días en ms
+  const STORAGE_KEY = 'exclusive_invite_timer_start';
 
-  function getTimeRemaining() {
-    const cycleDuration = 3 * 24 * 60 * 60 * 1000; // 3 días en ms
+  const getTimeRemaining = (startTime: number) => {
     const now = new Date().getTime();
-    const startTime = new Date('2025-06-08T00:00:00').getTime(); // Fecha base del ciclo
-    const elapsed = (now - startTime) % cycleDuration;
-    const remaining = cycleDuration - elapsed;
+    const elapsed = now - startTime;
+    const remaining = CYCLE_DURATION - (elapsed % CYCLE_DURATION);
 
     const totalSeconds = Math.floor(remaining / 1000);
     const days = Math.floor(totalSeconds / (3600 * 24));
@@ -19,12 +18,24 @@ export const ExclusiveInviteSection = () => {
     const seconds = totalSeconds % 60;
 
     return { days, hours, minutes, seconds };
-  }
+  };
+
+  const [timeLeft, setTimeLeft] = useState(() => {
+    let savedStart = localStorage.getItem(STORAGE_KEY);
+    if (!savedStart) {
+      const now = new Date().getTime();
+      localStorage.setItem(STORAGE_KEY, now.toString());
+      savedStart = now.toString();
+    }
+    return getTimeRemaining(parseInt(savedStart, 10));
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft(getTimeRemaining());
+      const savedStart = parseInt(localStorage.getItem(STORAGE_KEY) || `${Date.now()}`, 10);
+      setTimeLeft(getTimeRemaining(savedStart));
     }, 1000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -61,8 +72,10 @@ export const ExclusiveInviteSection = () => {
             
             <div className="relative">
               <div className="w-full bg-gray-600 rounded-full h-4">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-4 rounded-full transition-all duration-1000 ease-out" 
-                     style={{ width: '60%' }}></div>
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 h-4 rounded-full transition-all duration-1000 ease-out"
+                  style={{ width: '60%' }}
+                ></div>
               </div>
               <div className="flex justify-between text-sm text-gray-300 mt-2">
                 <span>0 plazas</span>
@@ -89,7 +102,7 @@ export const ExclusiveInviteSection = () => {
             </div>
           </div>
 
-          <Button 
+          <Button
             onClick={scrollToForm}
             size="lg"
             className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-6 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
